@@ -1,4 +1,4 @@
-FROM oryxprod/dotnetcore-2.2:20190501.3
+FROM 
 LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
 
 RUN apt-get update \
