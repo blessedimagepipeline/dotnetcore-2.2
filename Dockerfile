@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/oryx/dotnetcore:2.2-20190516.1
+FROM mcr.microsoft.com/oryx/dotnetcore:2.2-20190730.1
 LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
 
 RUN apt-get update \
@@ -10,6 +10,10 @@ RUN apt-get update \
         curl \
         wget \
         tcptraceroute \
+        net-tools \
+        dnsutils \
+        tcpdump \
+        iproute2 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /defaulthome/hostingstart \
